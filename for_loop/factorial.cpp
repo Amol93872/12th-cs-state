@@ -3,8 +3,8 @@ using namespace std;
 
 int main()
 {
-  int num;                 // Variable to store the number
-  long long factorial = 1; // Variable to store the factorial result
+  int num;            // Variable to store the number
+  long factorial = 1; // Variable to store the factorial result
 
   // Ask the user to enter a number
   cout << "Enter a number: ";

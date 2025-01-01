@@ -7,7 +7,7 @@ int main()
   int factorial; // Variable to store the factorial result
 
   // Loop through numbers 1 to 5
-  for (int i = 1; i <= 5; i++)
+  for (int i = 1; i <= 1000; i++)
   {
     factorial = 1; // Reset factorial to 1 for each number
     // Calculate factorial of i
