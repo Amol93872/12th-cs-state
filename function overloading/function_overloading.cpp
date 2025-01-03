@@ -25,6 +25,5 @@ int main()
     cout << "Addition of two integers: " << add(5, 10) << endl;
     cout << "Addition of three integers: " << add(5, 10, 15) << endl;
     cout << "Addition of two floating-point numbers: " << add(5.5f, 10.5f) << endl;
-
     return 0;
 }
