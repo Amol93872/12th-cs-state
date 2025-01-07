@@ -4,7 +4,7 @@ using namespace std;
 class Counter
 {
 private:
-    static int count; // Static data member
+    static int count; // Static data member to track the count
 
 public:
     Counter()
@@ -12,41 +12,30 @@ public:
         count++; // Increment count whenever an object is created
     }
 
-    ~Counter()
-    {
-        count--; // Decrement count whenever an object is destroyed
-    }
-
-    static void showCount()
-    { // Static member function
-        cout << "Current count: " << count << endl;
+    static int getCount()
+    { // Static member function to access the static data
+        return count;
     }
 };
 
-// Define and initialize the static data member
+// Definition and initialization of the static data member
 int Counter::count = 0;
 
 int main()
 {
-    Counter::showCount(); // Call static function without an object
+    Counter obj1; // Create first object
+    Counter obj2; // Create second object
 
-    Counter obj1, obj2;
-    Counter::showCount(); // Count after creating two objects
-
-    {
-        Counter obj3;
-        Counter::showCount(); // Count after creating a third object
-    } // obj3 goes out of scope and is destroyed
-
-    Counter::showCount(); // Count after obj3 is destroyed
+    // Access static member function without an object
+    cout << "Total objects created: " << Counter::getCount() << endl;
 
     return 0;
 }
-// Static Data Member (count):
+// Static Data Member:
 
-// Shared among all objects of the Counter class.
-// Updated whenever an object is created or destroyed.
-// Static Member Function (showCount):
+// The count variable is declared static inside the class. It is shared among all objects of the class.
+// It is initialized outside the class definition using int Counter::count = 0;.
+// Static Member Function:
 
-// Displays the value of the static data member count.
-// Accessed directly using the class name (Counter::showCount()).
+// The getCount function is a static member function, which can access only static data members.
+// It is invoked using the class name (Counter::getCount()), not an object.
